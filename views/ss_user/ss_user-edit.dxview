@@ -1,0 +1,33 @@
+
+<div data-dx-role="view" data-dx-name="ss_UserEdit" data-dx-title="ss_User">
+    <div data-dx-role="command" data-bind="dxCommand: { action: handleSave, location: 'save', title: 'Save', icon: 'save' } "></div>
+    <div data-dx-role="command" data-bind="dxCommand: { action: '#_back', location: 'cancel', behavior: 'back', title: 'Cancel', icon: 'close' }" ></div>
+    <div data-dx-target-placeholder="content">
+        <div data-bind="dxScrollView: { }">
+            <div class="dx-fieldset">
+                <div class="dx-field">
+                    <div class="dx-field-label">user_id: </div>
+                    <div class="dx-field-value" data-bind="dxTextbox: { value: ss_user.user_id, readonly: true }"></div>
+                </div>
+                <div class="dx-field">
+                    <div class="dx-field-label">user_name: </div>
+                    <div class="dx-field-value" data-bind="dxTextbox: { value: ss_user.user_name, placeholder: 'Enter user_name' }"></div>
+                </div>
+                <div class="dx-field">
+                    <div class="dx-field-label">passwd: </div>
+                    <div class="dx-field-value" data-bind="dxTextbox: { value: ss_user.passwd, placeholder: 'Enter passwd' }"></div>
+                </div>
+                <div class="dx-field">
+                    <div class="dx-field-label">cust_access_list: </div>
+                    <div class="dx-field-value" data-bind="dxTextbox: { value: ss_user.cust_access_list, placeholder: 'Enter cust_access_list' }"></div>
+                </div>
+                <div class="dx-field">
+                    <div class="dx-field-label">rcd_status: </div>
+                    <div class="dx-field-value" data-bind="dxTextbox: { value: ss_user.rcd_status, placeholder: 'Enter rcd_status' }"></div>
+                </div>
+            </div>
+            <br />
+            <br />
+        </div>
+    </div>
+</div>

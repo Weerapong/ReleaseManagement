@@ -1,0 +1,9 @@
+﻿/* Put css styles for MainForm view here */
+.dx-tileview .dx-tile {
+  border-radius: .5em;
+  text-align: center;
+  color: white;
+  background: green;
+  margin: 5px;
+}
+

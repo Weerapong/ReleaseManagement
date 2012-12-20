@@ -1,0 +1,14 @@
+
+<div data-dx-role="view" data-dx-name="ss_Package" data-dx-title="Software Package" data-dx-target-frame="navigation">
+    <div data-dx-role="command" data-bind="dxCommand: { action: '#ss_PackageEdit', location: 'create', title: 'Add', icon: 'plus' }"></div>
+    <div data-dx-target-placeholder="content" >             
+        <div data-bind="dxList: { dataSource: dataSource, pullDown: true }">
+          <div data-dx-name="item" data-dx-role="template" data-bind="dxAction: '#ss_PackageDetails/{PackageRID}'">
+<!--
+                <img height="55" style="padding: 10px; float:left;" data-bind="attr: { src: imageUrlPropertyName }" />
+-->
+                <div class="list-item" data-bind="text: PackageName"></div>
+          </div>                  
+        </div>
+    </div>
+</div>

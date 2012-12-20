@@ -1,0 +1,41 @@
+
+<div data-dx-role="view" data-dx-name="ss_CustomerEdit" data-dx-title="Customer Infomation">
+    <div data-dx-role="command" data-bind="dxCommand: { action: handleSave, location: 'save', title: 'Save', icon: 'save' } "></div>
+    <div data-dx-role="command" data-bind="dxCommand: { action: '#_back', location: 'cancel', behavior: 'back', title: 'Cancel', icon: 'close' }" ></div>
+    <div data-dx-target-placeholder="content">
+        <div data-bind="dxScrollView: { }">
+            <div class="dx-fieldset">
+                <div class="dx-field">
+                    <div class="dx-field-label">Code: </div>
+                    <div class="dx-field-value" data-bind="dxTextbox: { value: ss_customer.cust_code, placeholder: 'Enter cust_code' }"></div>
+                </div>
+                <div class="dx-field">
+                    <div class="dx-field-label">Name: </div>
+                    <div class="dx-field-value" data-bind="dxTextbox: { value: ss_customer.cust_name, placeholder: 'Enter cust_name' }"></div>
+                </div>
+                <div class="dx-field">
+                    <div class="dx-field-label">Name(Eng): </div>
+                    <div class="dx-field-value" data-bind="dxTextbox: { value: ss_customer.cust_name_e, placeholder: 'Enter cust_name_e' }"></div>
+                </div>
+                <div class="dx-field">
+                    <div class="dx-field-label">Contact: </div>
+                    <div class="dx-field-value" data-bind="dxTextbox: { value: ss_customer.pur_contact, placeholder: 'Enter pur_contact' }"></div>
+                </div>
+                <div class="dx-field">
+                    <div class="dx-field-label">Phone: </div>
+                    <div class="dx-field-value" data-bind="dxTextbox: { value: ss_customer.phone, placeholder: 'Enter phone' }"></div>
+                </div>
+                <div class="dx-field">
+                    <div class="dx-field-label">Email: </div>
+                    <div class="dx-field-value" data-bind="dxTextbox: { value: ss_customer.email, placeholder: 'Enter email' }"></div>
+                </div>
+                <div class="dx-field">
+                    <div class="dx-field-label">Location: </div>
+                    <div class="dx-field-value" data-bind="dxTextbox: { value: ss_customer.location, placeholder: 'Enter location' }"></div>
+                </div>
+            </div>
+            <br />
+            <br />
+        </div>
+    </div>
+</div>

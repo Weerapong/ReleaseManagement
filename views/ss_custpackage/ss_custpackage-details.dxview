@@ -1,0 +1,31 @@
+
+<div data-dx-role="view" data-dx-name="ss_CustPackageDetails" data-dx-title="ss_CustPackage">
+    <div data-dx-role="command" data-bind="dxCommand: { action: '#ss_CustPackageEdit/{id}', location: 'edit', title: 'Edit', icon: 'edit' }"></div>
+    <div data-dx-role="command" data-bind="dxCommand: { action: handleDelete, location: 'delete', title: 'Delete', icon: 'remove', type: 'danger' }"></div>
+    <div data-dx-target-placeholder="content" >
+        <div data-bind="dxScrollView: { }">
+            <div class="dx-fieldset">
+                <div class="dx-field">
+                    <div class="dx-field-label">CustPackageRID</div>
+                    <div class="dx-field-value" data-bind="text: ss_custpackage.CustPackageRID"></div>
+                </div>
+                <div class="dx-field">
+                    <div class="dx-field-label">PackageRID</div>
+                    <div class="dx-field-value" data-bind="text: ss_custpackage.PackageRID"></div>
+                </div>
+                <div class="dx-field">
+                    <div class="dx-field-label">CustomerRID</div>
+                    <div class="dx-field-value" data-bind="text: ss_custpackage.CustomerRID"></div>
+                </div>
+			</div>
+            <div data-dx-placeholder="view-footer" data-dx-transition="none"></div>
+            <br />
+            <br />
+        </div>
+        <div id="deleteConfirmation" data-bind="dxPopup: { width: 270, height: 150, title: 'Delete item' }">
+            <div class="msg">Are you sure you want to delete this item?</div>
+            <div class="msg-button-right" data-bind="dxButton: { text: 'Yes', click: handleConfirmDelete  }"></div>
+            <div class="msg-button-left" data-bind="dxButton: { text: 'No', click: handleCancelDelete }"></div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,70 @@
+<div data-dx-role="view" data-dx-name="ss_ReleaseDetails" data-dx-title="Software Release">
+    <div data-dx-role="command" data-bind="dxCommand: { action: '#ss_ReleaseEdit/{id}', location: 'edit', title: 'Edit', icon: 'edit' }"></div>
+    <div data-dx-role="command" data-bind="dxCommand: { action: handleDelete, location: 'delete', title: 'Delete', icon: 'remove', type: 'danger' }"></div>
+    <div data-dx-target-placeholder="content">
+        <div data-bind="dxScrollView: { }">
+            <div class="dx-fieldset">
+                <div class="dx-field">
+                    <div class="dx-field-label">Release Date</div>
+                    <div class="dx-field-value" data-bind="text: ss_release.ReleaseDate"></div>
+                </div>
+                <div class="dx-field">
+                    <div class="dx-field-label">Release By</div>
+                    <div class="dx-field-value" data-bind="text: ss_release.ReleaseBy"></div>
+                </div>
+                <div class="dx-field">
+                    <div class="dx-field-label">Package</div>
+                    <div class="dx-field-value" data-bind="text: ss_release.PackageRID"></div>
+                </div>
+                <div class="dx-field">
+                    <div class="dx-field-label">Program</div>
+                    <div class="dx-field-value" data-bind="text: ss_release.ProgramRID"></div>
+                </div>
+                <div class="dx-field">
+                    <div class="dx-field-label">Version</div>
+                    <div class="dx-field-value" data-bind="text: ss_release.ReleaseVersion"></div>
+                </div>
+                <div class="dx-field">
+                    <div class="dx-field-label">Description</div>
+                    <div class="dx-field-value" data-bind="text: ss_release.ReleaseDesc"></div>
+                </div>
+                <div class="dx-field">
+                    <div class="dx-field-label">Instruction</div>
+                    <div class="dx-field-value" data-bind="text: ss_release.Instruction"></div>
+                </div>
+                <div class="dx-field">
+                    <div class="dx-field-label">File Path</div>
+                    <div class="dx-field-value" data-bind="text: ss_release.SourceFilePath"></div>
+                </div>
+                <div class="dx-field">
+                    <div class="dx-field-label">ReleaseType</div>
+                    <div class="dx-field-value" data-bind="text: ss_release.ReleaseType"></div>
+                </div>
+                <div class="dx-field">
+                    <div class="dx-field-label">Create By</div>
+                    <div class="dx-field-value" data-bind="text: ss_release.RecordID"></div>
+                </div>
+                <div class="dx-field">
+                    <div class="dx-field-label">Create Date</div>
+                    <div class="dx-field-value" data-bind="text: ss_release.RecordDate"></div>
+                </div>
+                <div class="dx-field">
+                    <div class="dx-field-label">Update By</div>
+                    <div class="dx-field-value" data-bind="text: ss_release.UpdateID"></div>
+                </div>
+                <div class="dx-field">
+                    <div class="dx-field-label">Update Date</div>
+                    <div class="dx-field-value" data-bind="text: ss_release.UpdateDate"></div>
+                </div>
+            </div>
+            <div data-dx-transition="none" data-dx-placeholder="view-footer"></div>
+            <br>
+            <br>
+        </div>
+        <div id="deleteConfirmation" data-bind="dxPopup: { width: 270, height: 150, title: 'Delete item' }">
+            <div class="msg">Are you sure you want to delete this item?</div>
+            <div class="msg-button-right" data-bind="dxButton: { text: 'Yes', click: handleConfirmDelete  }"></div>
+            <div class="msg-button-left" data-bind="dxButton: { text: 'No', click: handleCancelDelete }"></div>
+        </div>
+    </div>
+</div>

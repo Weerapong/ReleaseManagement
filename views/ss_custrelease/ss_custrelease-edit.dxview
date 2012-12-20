@@ -1,0 +1,41 @@
+
+<div data-dx-role="view" data-dx-name="ss_CustReleaseEdit" data-dx-title="ss_CustRelease">
+    <div data-dx-role="command" data-bind="dxCommand: { action: handleSave, location: 'save', title: 'Save', icon: 'save' } "></div>
+    <div data-dx-role="command" data-bind="dxCommand: { action: '#_back', location: 'cancel', behavior: 'back', title: 'Cancel', icon: 'close' }" ></div>
+    <div data-dx-target-placeholder="content">
+        <div data-bind="dxScrollView: { }">
+            <div class="dx-fieldset">
+                <div class="dx-field">
+                    <div class="dx-field-label">CustReleaseRID: </div>
+                    <div class="dx-field-value" data-bind="dxNumberbox: { value: ss_custrelease.CustReleaseRID, readonly: true }"></div>
+                </div>
+                <div class="dx-field">
+                    <div class="dx-field-label">ReleaseRID: </div>
+                    <div class="dx-field-value" data-bind="dxNumberbox: { value: ss_custrelease.ReleaseRID, placeholder: 'Enter releaserid' }"></div>
+                </div>
+                <div class="dx-field">
+                    <div class="dx-field-label">CustomerRID: </div>
+                    <div class="dx-field-value" data-bind="dxNumberbox: { value: ss_custrelease.CustomerRID, placeholder: 'Enter customerrid' }"></div>
+                </div>
+                <div class="dx-field">
+                    <div class="dx-field-label">DeployBy: </div>
+                    <div class="dx-field-value" data-bind="dxTextbox: { value: ss_custrelease.DeployBy, placeholder: 'Enter deployby' }"></div>
+                </div>
+                <div class="dx-field">
+                    <div class="dx-field-label">DeployDate: </div>
+                    <div class="dx-field-value" data-bind="dxDatebox: { value: ss_custrelease.DeployDate, placeholder: 'Enter deploydate', format: 'date' }"></div>
+                </div>
+                <div class="dx-field">
+                    <div class="dx-field-label">UpdateID: </div>
+                    <div class="dx-field-value" data-bind="dxTextbox: { value: ss_custrelease.UpdateID, placeholder: 'Enter updateid' }"></div>
+                </div>
+                <div class="dx-field">
+                    <div class="dx-field-label">UpdateDate: </div>
+                    <div class="dx-field-value" data-bind="dxDatebox: { value: ss_custrelease.UpdateDate, placeholder: 'Enter updatedate', format: 'date' }"></div>
+                </div>
+            </div>
+            <br />
+            <br />
+        </div>
+    </div>
+</div>

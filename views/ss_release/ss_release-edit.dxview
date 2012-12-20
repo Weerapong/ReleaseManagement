@@ -1,0 +1,65 @@
+
+<div data-dx-role="view" data-dx-name="ss_ReleaseEdit" data-dx-title="Software Release">
+    <div data-dx-role="command" data-bind="dxCommand: { action: handleSave, location: 'save', title: 'Save', icon: 'save' } "></div>
+    <div data-dx-role="command" data-bind="dxCommand: { action: '#_back', location: 'cancel', behavior: 'back', title: 'Cancel', icon: 'close' }" ></div>
+    <div data-dx-target-placeholder="content">
+        <div data-bind="dxScrollView: { }">
+            <div class="dx-fieldset">
+                <div class="dx-field">
+                    <div class="dx-field-label">Release Date: </div>
+                    <div class="dx-field-value" data-bind="dxDatebox: { value: ss_release.ReleaseDate, placeholder: 'Enter releasedate', format: 'date' }"></div>
+                </div>
+                <div class="dx-field">
+                    <div class="dx-field-label">Release By: </div>
+                    <div class="dx-field-value" data-bind="dxTextbox: { value: ss_release.ReleaseBy, placeholder: 'Enter releaseby' }"></div>
+                </div>
+                <div class="dx-field">
+                    <div class="dx-field-label">Package: </div>
+                    <div class="dx-field-value" data-bind="dxNumberbox: { value: ss_release.PackageRID, placeholder: 'Enter packagerid' }"></div>
+                </div>
+                <div class="dx-field">
+                    <div class="dx-field-label">Program: </div>
+                    <div class="dx-field-value" data-bind="dxNumberbox: { value: ss_release.ProgramRID, placeholder: 'Enter programrid' }"></div>
+                </div>
+                <div class="dx-field">
+                    <div class="dx-field-label">Version: </div>
+                    <div class="dx-field-value" data-bind="dxTextbox: { value: ss_release.ReleaseVersion, placeholder: 'Enter releaseversion' }"></div>
+                </div>
+                <div class="dx-field">
+                    <div class="dx-field-label">Description: </div>
+                    <div class="dx-field-value" data-bind="dxTextbox: { value: ss_release.ReleaseDesc, placeholder: 'Enter releasedesc' }"></div>
+                </div>
+                <div class="dx-field">
+                    <div class="dx-field-label">Instruction: </div>
+                    <div class="dx-field-value" data-bind="dxTextbox: { value: ss_release.Instruction, placeholder: 'Enter instruction' }"></div>
+                </div>
+                <div class="dx-field">
+                    <div class="dx-field-label">File Path: </div>
+                    <div class="dx-field-value" data-bind="dxTextbox: { value: ss_release.SourceFilePath, placeholder: 'Enter sourcefilepath' }"></div>
+                </div>
+                <div class="dx-field">
+                    <div class="dx-field-label">Release Type: </div>
+                    <div class="dx-field-value" data-bind="dxTextbox: { value: ss_release.ReleaseType, placeholder: 'Enter releasetype' }"></div>
+                </div>
+                <div class="dx-field">
+                    <div class="dx-field-label">Create By: </div>
+                    <div class="dx-field-value" data-bind="text: ss_release.RecordID"></div>
+                </div>
+                <div class="dx-field">
+                    <div class="dx-field-label">Create Date: </div>
+                    <div class="dx-field-value" data-bind="text: ss_release.RecordDate"></div>
+                </div>
+                <div class="dx-field">
+                    <div class="dx-field-label">Update By: </div>
+                    <div class="dx-field-value" data-bind="text: ss_release.UpdateID"></div>
+                </div>
+                <div class="dx-field">
+                    <div class="dx-field-label">Update Date: </div>
+                    <div class="dx-field-value" data-bind="text: ss_release.UpdateDate"></div>
+                </div>
+            </div>
+            <br />
+            <br />
+        </div>
+    </div>
+</div>

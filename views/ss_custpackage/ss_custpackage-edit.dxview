@@ -1,0 +1,25 @@
+
+<div data-dx-role="view" data-dx-name="ss_CustPackageEdit" data-dx-title="ss_CustPackage">
+    <div data-dx-role="command" data-bind="dxCommand: { action: handleSave, location: 'save', title: 'Save', icon: 'save' } "></div>
+    <div data-dx-role="command" data-bind="dxCommand: { action: '#_back', location: 'cancel', behavior: 'back', title: 'Cancel', icon: 'close' }" ></div>
+    <div data-dx-target-placeholder="content">
+        <div data-bind="dxScrollView: { }">
+            <div class="dx-fieldset">
+                <div class="dx-field">
+                    <div class="dx-field-label">CustPackageRID: </div>
+                    <div class="dx-field-value" data-bind="dxNumberbox: { value: ss_custpackage.CustPackageRID, readonly: true }"></div>
+                </div>
+                <div class="dx-field">
+                    <div class="dx-field-label">PackageRID: </div>
+                    <div class="dx-field-value" data-bind="dxNumberbox: { value: ss_custpackage.PackageRID, placeholder: 'Enter packagerid' }"></div>
+                </div>
+                <div class="dx-field">
+                    <div class="dx-field-label">CustomerRID: </div>
+                    <div class="dx-field-value" data-bind="dxNumberbox: { value: ss_custpackage.CustomerRID, placeholder: 'Enter customerrid' }"></div>
+                </div>
+            </div>
+            <br />
+            <br />
+        </div>
+    </div>
+</div>

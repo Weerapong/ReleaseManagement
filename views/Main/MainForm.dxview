@@ -1,0 +1,8 @@
+<div data-dx-role="view" data-dx-name="MainForm" data-dx-title="MainForm">
+    <div data-dx-target-placeholder="content">
+        <div data-bind="dxTileView: { items: menus, itemRender: itemRenderer, itemClick: itemClick }">
+            <div data-dx-role="template" data-dx-name="item"><span data-bind="text: text"></span></div>
+            <div data-dx-role="template" data-dx-name="description"><span>Item Description</span></div>
+        </div>
+    </div>
+</div>

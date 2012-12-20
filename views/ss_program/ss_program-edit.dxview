@@ -1,0 +1,25 @@
+
+<div data-dx-role="view" data-dx-name="ss_ProgramEdit" data-dx-title="Program Code">
+    <div data-dx-role="command" data-bind="dxCommand: { action: handleSave, location: 'save', title: 'Save', icon: 'save' } "></div>
+    <div data-dx-role="command" data-bind="dxCommand: { action: '#_back', location: 'cancel', behavior: 'back', title: 'Cancel', icon: 'close' }" ></div>
+    <div data-dx-target-placeholder="content">
+        <div data-bind="dxScrollView: { }">
+            <div class="dx-fieldset">
+                <div class="dx-field">
+                    <div class="dx-field-label">Code: </div>
+                    <div class="dx-field-value" data-bind="dxTextbox: { value: ss_program.ProgramCode, placeholder: 'Enter programcode' }"></div>
+                </div>
+                <div class="dx-field">
+                    <div class="dx-field-label">Name: </div>
+                    <div class="dx-field-value" data-bind="dxTextbox: { value: ss_program.ProgramName, placeholder: 'Enter programname' }"></div>
+                </div>
+                <div class="dx-field">
+                    <div class="dx-field-label">File Path: </div>
+                    <div class="dx-field-value" data-bind="dxTextbox: { value: ss_program.SourceFilePath, placeholder: 'Enter sourcefilepath' }"></div>
+                </div>
+            </div>
+            <br />
+            <br />
+        </div>
+    </div>
+</div>

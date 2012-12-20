@@ -1,0 +1,14 @@
+
+<div data-dx-role="view" data-dx-name="ss_Release" data-dx-title="Software Release" data-dx-target-frame="navigation">
+    <div data-dx-role="command" data-bind="dxCommand: { action: '#ss_ReleaseEdit', location: 'create', title: 'Add', icon: 'plus' }"></div>
+    <div data-dx-target-placeholder="content" >             
+        <div data-bind="dxList: { dataSource: dataSource, pullDown: true }">
+          <div data-dx-name="item" data-dx-role="template" data-bind="dxAction: '#ss_ReleaseDetails/{ReleaseRID}'">
+<!--
+                <img height="55" style="padding: 10px; float:left;" data-bind="attr: { src: imageUrlPropertyName }" />
+-->
+                <div class="list-item" data-bind="text: ReleaseBy"></div>
+          </div>                  
+        </div>
+    </div>
+</div>

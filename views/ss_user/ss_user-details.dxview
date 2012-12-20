@@ -1,0 +1,39 @@
+
+<div data-dx-role="view" data-dx-name="ss_UserDetails" data-dx-title="ss_User">
+    <div data-dx-role="command" data-bind="dxCommand: { action: '#ss_UserEdit/{id}', location: 'edit', title: 'Edit', icon: 'edit' }"></div>
+    <div data-dx-role="command" data-bind="dxCommand: { action: handleDelete, location: 'delete', title: 'Delete', icon: 'remove', type: 'danger' }"></div>
+    <div data-dx-target-placeholder="content" >
+        <div data-bind="dxScrollView: { }">
+            <div class="dx-fieldset">
+                <div class="dx-field">
+                    <div class="dx-field-label">user_id</div>
+                    <div class="dx-field-value" data-bind="text: ss_user.user_id"></div>
+                </div>
+                <div class="dx-field">
+                    <div class="dx-field-label">user_name</div>
+                    <div class="dx-field-value" data-bind="text: ss_user.user_name"></div>
+                </div>
+                <div class="dx-field">
+                    <div class="dx-field-label">passwd</div>
+                    <div class="dx-field-value" data-bind="text: ss_user.passwd"></div>
+                </div>
+                <div class="dx-field">
+                    <div class="dx-field-label">cust_access_list</div>
+                    <div class="dx-field-value" data-bind="text: ss_user.cust_access_list"></div>
+                </div>
+                <div class="dx-field">
+                    <div class="dx-field-label">rcd_status</div>
+                    <div class="dx-field-value" data-bind="text: ss_user.rcd_status"></div>
+                </div>
+			</div>
+            <div data-dx-placeholder="view-footer" data-dx-transition="none"></div>
+            <br />
+            <br />
+        </div>
+        <div id="deleteConfirmation" data-bind="dxPopup: { width: 270, height: 150, title: 'Delete item' }">
+            <div class="msg">Are you sure you want to delete this item?</div>
+            <div class="msg-button-right" data-bind="dxButton: { text: 'Yes', click: handleConfirmDelete  }"></div>
+            <div class="msg-button-left" data-bind="dxButton: { text: 'No', click: handleCancelDelete }"></div>
+        </div>
+    </div>
+</div>

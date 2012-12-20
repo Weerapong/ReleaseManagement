@@ -1,0 +1,21 @@
+
+<div data-dx-role="view" data-dx-name="ss_PackageEdit" data-dx-title="Software Package">
+    <div data-dx-role="command" data-bind="dxCommand: { action: handleSave, location: 'save', title: 'Save', icon: 'save' } "></div>
+    <div data-dx-role="command" data-bind="dxCommand: { action: '#_back', location: 'cancel', behavior: 'back', title: 'Cancel', icon: 'close' }" ></div>
+    <div data-dx-target-placeholder="content">
+        <div data-bind="dxScrollView: { }">
+            <div class="dx-fieldset">
+                <div class="dx-field">
+                    <div class="dx-field-label">Name: </div>
+                    <div class="dx-field-value" data-bind="dxTextbox: { value: ss_package.PackageName, placeholder: 'Enter packagename' }"></div>
+                </div>
+                <div class="dx-field">
+                    <div class="dx-field-label">Platform: </div>
+                    <div class="dx-field-value" data-bind="dxTextbox: { value: ss_package.PackagePlatform, placeholder: 'Enter packageplatform' }"></div>
+                </div>
+            </div>
+            <br />
+            <br />
+        </div>
+    </div>
+</div>

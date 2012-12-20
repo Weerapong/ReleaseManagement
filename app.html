@@ -1,0 +1,132 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Release Management</title>
+        
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+
+    <!-- Framework -->
+    <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="js/knockout-2.1.0.js"></script>
+    <script type="text/javascript" src="js/globalize.js"></script>
+
+    <script type="text/javascript" src="js/dxtreme.core-12.2.js"></script>
+    <script type="text/javascript" src="js/dxtreme.framework-12.2.js"></script>
+    <script type="text/javascript" src="js/dxtreme.widgets-12.2.js"></script>
+    <script type="text/javascript" src="js/dxtreme.viz-12.2.js"></script>
+
+<!--
+    <script type="text/javascript" src="js/dxtreme.core-12.2.debug.js"></script>
+    <script type="text/javascript" src="js/dxtreme.framework-12.2.debug.js"></script>
+    <script type="text/javascript" src="js/dxtreme.widgets-12.2.debug.js"></script>
+    <script type="text/javascript" src="js/dxtreme.viz-12.2.debug.js"></script>
+-->
+
+	<link rel="stylesheet" type="text/css" href="css/dxtreme.ios.default-12.2.css" />
+	<link rel="stylesheet" type="text/css" href="css/dxtreme.android.holo-dark-12.2.css" />
+	<link rel="stylesheet" type="text/css" href="css/dxtreme.desktop.default-12.2.css" />
+	<link rel="stylesheet" type="text/css" href="css/dxtreme.win8.black-12.2.css" />
+	<!-- link rel="stylesheet" type="text/css" href="css/dxtreme.win8.white-12.2.css" / -->
+	<!-- link rel="stylesheet" type="text/css" href="css/dxtreme.win8.black.small-12.2.css" / -->
+
+    <link rel="stylesheet" type="text/css" href="app.css" />
+    <script type="text/javascript" src="releasemanagement.shared.config.js"></script>
+    <script type="text/javascript" src="releasemanagement.config.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <script type="text/javascript" src="data/db.js"></script>
+	<script type="text/javascript" src="data/ss_customer-view-model.js"></script>
+	<script type="text/javascript" src="data/ss_custpackage-view-model.js"></script>
+	<script type="text/javascript" src="data/ss_custrelease-view-model.js"></script>
+	<script type="text/javascript" src="data/ss_package-view-model.js"></script>
+	<script type="text/javascript" src="data/ss_program-view-model.js"></script>
+	<script type="text/javascript" src="data/ss_release-view-model.js"></script>
+	<script type="text/javascript" src="data/ss_user-view-model.js"></script>
+    <!-- Layouts -->
+    <link rel="stylesheet" type="text/css" href="layouts/SlideOut/SlideOutLayout.css" />
+    <link rel="dx-template" type="text/html" href="layouts/SlideOut/SlideOutLayout.html"/>
+    <script type="text/javascript" src="layouts/SlideOut/SlideOutLayout.js"></script>
+
+    <!-- Views -->
+    <script type="text/javascript" src="views/ss_customer/ss_customer.js"></script>
+    <link rel="dx-template" type="text/html" href="views/ss_customer/ss_customer.dxview"/>    
+    <link rel="stylesheet" type="text/css" href="views/ss_customer/ss_customer.css"/>    
+    <script type="text/javascript" src="views/ss_customer/ss_customer-details.js"></script>
+    <link rel="dx-template" type="text/html" href="views/ss_customer/ss_customer-details.dxview"/>
+    <link rel="stylesheet" type="text/css" href="views/ss_customer/ss_customer-details.css"/>
+    <script type="text/javascript" src="views/ss_customer/ss_customer-edit.js"></script>
+    <link rel="dx-template" type="text/html" href="views/ss_customer/ss_customer-edit.dxview"/>
+    <link rel="stylesheet" type="text/css" href="views/ss_customer/ss_customer-edit.css"/>
+    <script type="text/javascript" src="views/ss_custpackage/ss_custpackage.js"></script>
+    <link rel="dx-template" type="text/html" href="views/ss_custpackage/ss_custpackage.dxview"/>    
+    <link rel="stylesheet" type="text/css" href="views/ss_custpackage/ss_custpackage.css"/>    
+    <script type="text/javascript" src="views/ss_custpackage/ss_custpackage-details.js"></script>
+    <link rel="dx-template" type="text/html" href="views/ss_custpackage/ss_custpackage-details.dxview"/>
+    <link rel="stylesheet" type="text/css" href="views/ss_custpackage/ss_custpackage-details.css"/>
+    <script type="text/javascript" src="views/ss_custpackage/ss_custpackage-edit.js"></script>
+    <link rel="dx-template" type="text/html" href="views/ss_custpackage/ss_custpackage-edit.dxview"/>
+    <link rel="stylesheet" type="text/css" href="views/ss_custpackage/ss_custpackage-edit.css"/>
+    <script type="text/javascript" src="views/ss_custrelease/ss_custrelease.js"></script>
+    <link rel="dx-template" type="text/html" href="views/ss_custrelease/ss_custrelease.dxview"/>    
+    <link rel="stylesheet" type="text/css" href="views/ss_custrelease/ss_custrelease.css"/>    
+    <script type="text/javascript" src="views/ss_custrelease/ss_custrelease-details.js"></script>
+    <link rel="dx-template" type="text/html" href="views/ss_custrelease/ss_custrelease-details.dxview"/>
+    <link rel="stylesheet" type="text/css" href="views/ss_custrelease/ss_custrelease-details.css"/>
+    <script type="text/javascript" src="views/ss_custrelease/ss_custrelease-edit.js"></script>
+    <link rel="dx-template" type="text/html" href="views/ss_custrelease/ss_custrelease-edit.dxview"/>
+    <link rel="stylesheet" type="text/css" href="views/ss_custrelease/ss_custrelease-edit.css"/>
+    <script type="text/javascript" src="views/ss_package/ss_package.js"></script>
+    <link rel="dx-template" type="text/html" href="views/ss_package/ss_package.dxview"/>    
+    <link rel="stylesheet" type="text/css" href="views/ss_package/ss_package.css"/>    
+    <script type="text/javascript" src="views/ss_package/ss_package-details.js"></script>
+    <link rel="dx-template" type="text/html" href="views/ss_package/ss_package-details.dxview"/>
+    <link rel="stylesheet" type="text/css" href="views/ss_package/ss_package-details.css"/>
+    <script type="text/javascript" src="views/ss_package/ss_package-edit.js"></script>
+    <link rel="dx-template" type="text/html" href="views/ss_package/ss_package-edit.dxview"/>
+    <link rel="stylesheet" type="text/css" href="views/ss_package/ss_package-edit.css"/>
+    <script type="text/javascript" src="views/ss_program/ss_program.js"></script>
+    <link rel="dx-template" type="text/html" href="views/ss_program/ss_program.dxview"/>    
+    <link rel="stylesheet" type="text/css" href="views/ss_program/ss_program.css"/>    
+    <script type="text/javascript" src="views/ss_program/ss_program-details.js"></script>
+    <link rel="dx-template" type="text/html" href="views/ss_program/ss_program-details.dxview"/>
+    <link rel="stylesheet" type="text/css" href="views/ss_program/ss_program-details.css"/>
+    <script type="text/javascript" src="views/ss_program/ss_program-edit.js"></script>
+    <link rel="dx-template" type="text/html" href="views/ss_program/ss_program-edit.dxview"/>
+    <link rel="stylesheet" type="text/css" href="views/ss_program/ss_program-edit.css"/>
+    <script type="text/javascript" src="views/ss_release/ss_release.js"></script>
+    <link rel="dx-template" type="text/html" href="views/ss_release/ss_release.dxview"/>    
+    <link rel="stylesheet" type="text/css" href="views/ss_release/ss_release.css"/>    
+    <script type="text/javascript" src="views/ss_release/ss_release-details.js"></script>
+    <link rel="dx-template" type="text/html" href="views/ss_release/ss_release-details.dxview"/>
+    <link rel="stylesheet" type="text/css" href="views/ss_release/ss_release-details.css"/>
+    <script type="text/javascript" src="views/ss_release/ss_release-edit.js"></script>
+    <link rel="dx-template" type="text/html" href="views/ss_release/ss_release-edit.dxview"/>
+    <link rel="stylesheet" type="text/css" href="views/ss_release/ss_release-edit.css"/>
+    <script type="text/javascript" src="views/ss_user/ss_user.js"></script>
+    <link rel="dx-template" type="text/html" href="views/ss_user/ss_user.dxview"/>    
+    <link rel="stylesheet" type="text/css" href="views/ss_user/ss_user.css"/>    
+    <script type="text/javascript" src="views/ss_user/ss_user-details.js"></script>
+    <link rel="dx-template" type="text/html" href="views/ss_user/ss_user-details.dxview"/>
+    <link rel="stylesheet" type="text/css" href="views/ss_user/ss_user-details.css"/>
+    <script type="text/javascript" src="views/ss_user/ss_user-edit.js"></script>
+    <link rel="dx-template" type="text/html" href="views/ss_user/ss_user-edit.dxview"/>
+    <link rel="stylesheet" type="text/css" href="views/ss_user/ss_user-edit.css"/>
+    <link rel="dx-template" type="text/html" href="views/about.html"/>
+
+    <script>
+        $(function() {
+        ReleaseManagement.app.navigate();
+        });
+    </script>
+
+		<script type="text/javascript" src="views/Main/MainForm.js"></script>
+		<link rel="dx-template" type="text/html" href="views/Main/MainForm.dxview"/>
+		<link rel="stylesheet" type="text/css" href="views/Main/MainForm.css"/>
+
+</head>
+<body>
+    <div id="viewPort"></div>
+</body>
+</html>
