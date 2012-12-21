@@ -4,8 +4,8 @@ window.ReleaseManagement = $.extend(true, window.ReleaseManagement, {
     "config": {
         "endpoints": {
             "db": {
-                "local": "http://localhost/SpReleaseService/DataService.svc",
-                "production": "http://localhost/SpReleaseService/DataService.svc"
+                "local": "http://192.168.13.201/SpReleaseService/DataService.svc",
+                "production": "http://192.168.13.201/SpReleaseService/DataService.svc"
             }
         },
         "services": {
