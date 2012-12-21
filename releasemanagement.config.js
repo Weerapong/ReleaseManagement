@@ -2,7 +2,7 @@
 // NOTE object below must be a valid JSON
 window.ReleaseManagement = $.extend(true, window.ReleaseManagement, {
   "config": {
-    "defaultLayout": "slideout",
+    "defaultLayout": "navbar",
     "navigation": [
       {
         "title": "MainForm",
